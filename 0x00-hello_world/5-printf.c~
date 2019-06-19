@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+/**
+* main - prints with printf
+* Return: always 0
+*/
