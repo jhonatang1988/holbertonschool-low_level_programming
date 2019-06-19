@@ -5,7 +5,7 @@
  *
  * Return: 0 always
  */
-int main ()
+int main()
 {
     char str1[51];
     strcpy(str1, "\"Programming is like building a multilingual puzzle");
