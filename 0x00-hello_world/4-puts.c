@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+/*
+ *Description: function to print a string
+*/
 
 int main (){
     char str1[50];
