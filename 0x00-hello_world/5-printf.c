@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
  * main - prints with printf
  *
@@ -7,10 +6,7 @@
  */
 int main(void)
 {
-	char str1[56];
-
-	strcpy(str1, "with proper grammar, but the outcome is a piece of art,");
-	printf(str1);
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 
 	return (0);
 }
