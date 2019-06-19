@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-/*
- *Description: function to print a string
-*/
-
-int main (){
+/**
+ *function to print a string
+ *
+ * Return: 0 always
+ */
+int main ()
+{
     char str1[50];
     strcpy(str1, "\"Programming is like building a multilingual puzzle");
 
