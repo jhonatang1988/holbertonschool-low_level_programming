@@ -11,10 +11,10 @@ int main(void)
 
 	for (a1to9 = 0; a1to9 <= 8; a1to9++)
 	{
-		for (b1to9 = 0; b1to9 <= 8; b1to9++)
+		for (b1to9 = 0; b1to9 <= 9; b1to9++)
 		{
-			if (j == 0)
-				j = j + i + 1;
+			if (b1to9 == 0)
+				b1to9 = b1to9 + a1to9 + 1;
 			putchar(a1to9 + '0');
 			putchar(b1to9 + '0');
 			if (a1to9 != 8 || b1to9 != 9)
