@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
  * main - from a to z in lower case
@@ -10,7 +8,7 @@ int main(void)
 {
 	char atoz;
 
-	for (atoz = 'a'; atoz < 'z'; atoz++)
+	for (atoz = 'a'; atoz <= 'z'; atoz++)
 	{
 		if (atoz != 'q' && atoz != 'e')
 			putchar(atoz);
