@@ -1,0 +1,16 @@
+#include <stdio.h>
+/**
+ * main - from z to a in lower case
+ *
+ * Return: always 0
+ */
+int main(void)
+{
+        char atoz;
+
+        for (atoz = 'z'; atoz >= 'a'; atoz--)
+                putchar(atoz);
+
+        putchar('\n');
+        return (0);
+}
