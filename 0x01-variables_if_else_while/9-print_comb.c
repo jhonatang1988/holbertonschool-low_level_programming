@@ -11,8 +11,11 @@ int main(void)
 	for (atoz = 0; atoz <= 9; atoz++)
 	{
 		putchar(atoz + '0');
-		putchar(',');
-		putchar(' ');
+		if (atoz != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
