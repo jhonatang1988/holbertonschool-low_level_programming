@@ -4,7 +4,7 @@
 /**
  * main - print if is positive, negative or equal to zero, a random number
  *
- * Return: always 0 
+ * Return: always 0
  */
 int main(void)
 {
