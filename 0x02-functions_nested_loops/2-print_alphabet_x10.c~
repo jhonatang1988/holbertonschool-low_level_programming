@@ -1,0 +1,23 @@
+#include "holberton.h"
+/**
+ * main - prints alphabet
+ *
+ * Return: always 0
+ */
+void print_alphabet(void)
+{
+	int atoz;
+	int atozx10 = 1;
+
+	while (atozx10 <= 10)
+	{
+
+		for (atoz = 'a'; atoz <= 'z'; atoz++)
+		{
+			_putchar(atoz);
+		}
+		_putchar('\n');
+
+		atozx10++;
+	};
+}
