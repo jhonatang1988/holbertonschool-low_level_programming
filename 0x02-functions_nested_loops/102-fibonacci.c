@@ -1,0 +1,27 @@
+#include <stdio.h>
+/**
+ * main - fibonnaci
+ *
+ * Return: return the fibonnaci series of 50
+ */
+void main(void)
+{
+	long double fib1 = 0;
+	long double fib2 = 1;
+	long double fib3 = 0;
+	int count = 1;
+
+	printf("%.Lf, ", fib2);
+
+	while (count <= 49)
+	{
+		fib3 = fib1 + fib2;
+		printf("%.Lf", fib3);
+		fib1 = fib2;
+		fib2 = fib3;
+		count++;
+		if (count != 50)
+			printf(", ");
+	}
+	printf("\n");
+}
