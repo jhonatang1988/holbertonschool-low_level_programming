@@ -4,7 +4,7 @@
  *
  * Return: return the fibonnaci series of 50
  */
-void main(void)
+int main(void)
 {
 	long double fib1 = 0;
 	long double fib2 = 1;
@@ -24,4 +24,6 @@ void main(void)
 			printf(", ");
 	}
 	printf("\n");
+
+	return (0);
 }
