@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
  * _isalpha - prints alphabet
+ * @c: checks for alphabetic character
  *
- * Return: always 0
+ * Return: always 1 for alphabetic character. 0 elsewhere
  */
 int _isalpha(int c)
 {

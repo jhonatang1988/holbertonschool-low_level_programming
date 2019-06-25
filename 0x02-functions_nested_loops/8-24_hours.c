@@ -1,7 +1,10 @@
 #include "holberton.h"
-
 /**
  * jack_bauer - prints alphabet
+ * @w: first int
+ * @x: second int
+ * @y: third int
+ * @z: fourth int
  *
  * Return: always 0
  */
