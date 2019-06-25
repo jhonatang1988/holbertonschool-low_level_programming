@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - prints alphabet
+ * print_last_digit - prints alphabet
  *
  * Return: always 0
  */
