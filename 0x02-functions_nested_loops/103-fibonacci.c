@@ -6,12 +6,12 @@
  */
 long double  main(void)
 {
-	long double fib1 = 1;
-	long double fib2 = 2;
-	long double fib3 = 0;
+	int fib1 = 1;
+	int fib2 = 2;
+	int fib3 = 0;
 	int count = 1;
 
-	long double sum;
+	int sum;
 
 	fib1 = 1;
 	fib2 = 2;
@@ -24,9 +24,9 @@ long double  main(void)
 		fib1 = fib2;
 		fib2 = fib3;
 		count++;
-
-		sum = sum + fib3;
+		if (fib3 % 2 == 0)
+			sum = sum + fib3;
 	}
-	printf("%.Lf\n", sum);
+	printf("%d\n", sum);
 	return (sum);
 }
