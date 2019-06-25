@@ -1,10 +1,6 @@
 #include "holberton.h"
 /**
  * jack_bauer - prints alphabet
- * @w: first int
- * @x: second int
- * @y: third int
- * @z: fourth int
  *
  * Return: always 0
  */
@@ -17,8 +13,10 @@ void jack_bauer(void)
 
 	for (w = 0; w <= 2; w++)
 	{
-		for (x = 0; x <= 3; x++)
+		for (x = 0; x <= 9; x++)
 		{
+			if (w == 2 && x == 4)
+				break;
 			for (y = 0; y <= 5; y++)
 			{
 				for (z = 0; z <= 9; z++)
