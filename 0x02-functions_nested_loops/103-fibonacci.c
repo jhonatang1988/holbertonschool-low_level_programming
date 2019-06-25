@@ -4,7 +4,7 @@
  *
  * Return: return the fibonnaci series of 50
  */
-long double  main(void)
+int main(void)
 {
 	int fib1 = 1;
 	int fib2 = 2;
@@ -28,5 +28,5 @@ long double  main(void)
 			sum = sum + fib3;
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
