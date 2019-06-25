@@ -50,6 +50,11 @@ void print_times_table(int n)
 				}
 			}
 			_putchar('\n');
+			spaces();
 		}
 	}
+}
+void spaces(void)
+{
+	_putchar(' ');
 }

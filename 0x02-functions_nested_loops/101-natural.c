@@ -4,7 +4,7 @@
  *
  * Return: always last digit
  */
-void main(void)
+int main(void)
 {
 	int x;
 	int sum;
@@ -17,4 +17,6 @@ void main(void)
 		}
 	}
 	printf("%d\n", sum);
+
+	return (0);
 }
