@@ -1,7 +1,9 @@
 #include "holberton.h"
+
  /**
-  * print_alphabet - prints alphabet normally
+  * print_alphabet - Entry point
   *
+  * Return - always zero (success)
   */
 void print_alphabet(void)
 {
@@ -12,4 +14,5 @@ void print_alphabet(void)
 		_putchar(atoz);
 	}
 	_putchar('\n');
+
 }
