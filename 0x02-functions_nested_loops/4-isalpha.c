@@ -4,13 +4,10 @@
  *
  * Return: always 0
  */
-int print_alphabet(void)
+int _isalpha(int c)
 {
-	int atoz;
-
-	for (atoz = 'a'; atoz <= 'z'; atoz++)
-	{
-		_putchar(atoz);
-	}
-	_putchar('\n');
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
