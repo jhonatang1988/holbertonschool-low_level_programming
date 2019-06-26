@@ -16,7 +16,7 @@ int main(void)
 	fib1 = 1;
 	fib2 = 2;
 	count = 1;
-	sum = 3;
+	sum = 2;
 
 	while (count <= 30)
 	{
