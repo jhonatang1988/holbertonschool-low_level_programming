@@ -21,6 +21,7 @@ void  print_square(int size)
 	while (squarey <= size)
 	{
 		int squarex = 1;
+
 		while (squarex <= size)
 		{
 			_putchar(hashtag);
