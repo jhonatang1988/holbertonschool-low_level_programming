@@ -9,7 +9,7 @@ void  more_numbers(void)
 {
 	int times = 0;
 
-	while (times <= 10)
+	while (times <= 9)
 	{
 		int total = 0;
 		int count = 48;
