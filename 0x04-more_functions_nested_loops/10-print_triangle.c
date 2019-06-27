@@ -10,6 +10,9 @@ void  print_triangle(int size)
 {
 	int timesx = 1;
 
+	if (size < 1)
+		_putchar('\n');
+
 	while (timesx <= size)
 	{
 		int timesy =  0;
