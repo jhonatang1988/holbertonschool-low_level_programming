@@ -1,0 +1,34 @@
+#include "holberton.h"
+
+/**
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number times the \ character will be printed
+ *
+ * Return: void
+ */
+void  print_diagonal(int n)
+{
+
+	int enddiagonal = 0;
+	char backslash = '\\';
+
+	if (n < 1)
+	{
+		_putchar('\n');
+		return;
+	}
+
+	while (enddiagonal < n)
+	{
+		int spaces = 1;
+
+		while (spaces <= enddiagonal)
+		{
+			_putchar(' ');
+			spaces++;
+		}
+		_putchar(backslash);
+		_putchar('\n');
+		enddiagonal++;
+	}
+}
