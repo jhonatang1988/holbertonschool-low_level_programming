@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- *_atoi - Entry point
- *@s: pointer to the string
- *Return: int
+ * _atoi - Entry point
+ * @s: pointer to the string
+ *
+ * Return: int
  */
 int _atoi(char *s)
 {
 	int increment = 0;
 	int increment2 = 0;
 	int negatives = 0;
-	int entero = 0;
+	unsigned int entero = 0;
 
 	while (*(s + increment) != '\0')
 	{
