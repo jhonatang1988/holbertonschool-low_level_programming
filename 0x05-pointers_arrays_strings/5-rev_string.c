@@ -25,4 +25,5 @@ void rev_string(char *s)
 		increment3++;
 	}
 
+	s[10] = '\0';
 }
