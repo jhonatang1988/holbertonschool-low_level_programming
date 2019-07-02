@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * swap_int - reset value to 98 with a pointer
- * @*a: first integer
- * @*b: second integer
+ * @a: first integer
+ * @b: second integer
  *
  * Return: nothing
  */
