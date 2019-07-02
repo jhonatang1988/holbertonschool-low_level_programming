@@ -10,7 +10,7 @@ void rev_string(char *s)
 	int increment = 0;
 	int increment2 = 0;
 	int increment3 = 0;
-	char tmpstr[10];
+	char tmpstr[1000];
 
 	while (*(s + increment) != '\0')
 	{
@@ -24,6 +24,4 @@ void rev_string(char *s)
 		s[increment3] = tmpstr[increment - 1];
 		increment3++;
 	}
-
-	s[10] = '\0';
 }
