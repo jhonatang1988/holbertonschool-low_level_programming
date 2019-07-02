@@ -14,10 +14,8 @@ char *_strcpy(char *dest, char *src)
 	while (*(src + increment) != '\0')
 	{
 		*(dest + increment) = *(src + increment);
-		increment++;
+		++increment;
 	}
-
-	*(dest + increment + 1) = *(src + increment + 1);
 
 	return (&*dest);
 }
