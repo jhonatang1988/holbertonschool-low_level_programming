@@ -11,6 +11,9 @@ char *cap_string(char *str)
 	char wordsep[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
 	int wordsepcounter;
 
+	if (str[0] != '\0' && str[0] > 96 && str[0] < 123)
+		str[0] = str[0] - 32;
+
 	while (str[counter] != '\0')
 	{
 		wordsepcounter = 0;
