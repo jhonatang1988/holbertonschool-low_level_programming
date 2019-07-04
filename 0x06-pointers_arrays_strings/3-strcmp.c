@@ -18,8 +18,10 @@ int _strcmp(char *s1, char *s2)
 		else
 			break;
 	}
-
-	diff = s1[counter] - s2[counter];
+	if (s1[counter + 1] == '\0' || s1[counter + 1] == '\0' )
+		diff = s1[counter] - s2[counter];
+	else
+		diff = s1[counter] - s2[counter];
 
 	return (diff);
 }
