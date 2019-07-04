@@ -11,16 +11,19 @@ int _strcmp(char *s1, char *s2)
 	int counter;
 	int diff;
 
-	for (counter = 0; s1[counter] != '\0' && s2[counter] != '\0'; counter++)
+	for (counter = 0; s1[counter] != '\0'; counter++)
 	{
 		if (s1[counter] == s2[counter])
+		{
 			counter++;
+		}
 		else
+		{
+			diff = s1[counter] - s2[counter];
 			break;
+		}
 	}
-	if (s1[counter + 1] == '\0' || s1[counter + 1] == '\0' )
-		diff = s1[counter] - s2[counter];
-	else
+	if (s1[counter] == '\0' || s2[counter] == '\0' )
 		diff = s1[counter] - s2[counter];
 
 	return (diff);
