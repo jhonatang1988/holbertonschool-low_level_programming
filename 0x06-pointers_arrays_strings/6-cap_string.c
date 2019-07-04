@@ -8,14 +8,14 @@
 char *cap_string(char *str)
 {
 	int counter = 0;
-	char wordsep[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '-', '\t', '\n'};
+	char wordsep[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
 	int wordsepcounter;
 
 	while (str[counter] != '\0')
 	{
 		wordsepcounter = 0;
 
-		while (wordsepcounter < 14)
+		while (wordsepcounter < 13)
 		{
 			if (str[counter] == wordsep[wordsepcounter])
 			{
