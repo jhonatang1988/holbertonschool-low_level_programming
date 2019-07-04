@@ -9,13 +9,13 @@
 int _strcmp(char *s1, char *s2)
 {
 	int counter;
-	int diff;
+	int diff = 0;
 
 	for (counter = 0; s1[counter] != '\0'; counter++)
 	{
 		if (s1[counter] == s2[counter])
 		{
-			counter++;
+
 		}
 		else
 		{
@@ -23,8 +23,10 @@ int _strcmp(char *s1, char *s2)
 			break;
 		}
 	}
-	if (s1[counter] == '\0' || s2[counter] == '\0' )
+	if (diff == 0 && s1[counter] == '\0')
+	{
 		diff = s1[counter] - s2[counter];
+	}
 
 	return (diff);
 }
