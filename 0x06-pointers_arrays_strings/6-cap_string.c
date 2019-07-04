@@ -8,7 +8,8 @@
 char *cap_string(char *str)
 {
 	int counter = 0;
-	char wordsep[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
+	char wordsep[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' '
+			  , '\t', '\n'};
 	int wordsepcounter;
 
 	if (str[0] != '\0' && str[0] > 96 && str[0] < 123)
