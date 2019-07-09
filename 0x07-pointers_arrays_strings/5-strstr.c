@@ -25,15 +25,13 @@ char *_strstr(char *haystack, char *needle)
 
 	for (j = 0; needle[j] != '\0'; j++)
 	{
-		if (needle[j] == haystack[i])
-			i++;
-		else
+		printf("j: %d\n", j);
+		if (needle[j] != haystack[i])
 			return (NULL);
+		i++;
 	}
 
-	if (needle[j + 1] != haystack[i])
-		return (NULL);
-
+	
 	return (&(haystack[k]));
 
 	/*for (j = 0; needle[i] != '\0'; j++)
