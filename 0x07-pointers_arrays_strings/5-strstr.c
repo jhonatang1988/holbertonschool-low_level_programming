@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stddef.h>
 /**
  * _strstr - finds the first occurrence of the substring needle in
  * the string haystack
@@ -12,15 +13,35 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 	int j;
-	int match = 0;
-	char *address = NULL;
+	int k;
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (j = 0; needle[j] != '\0'; j++)
+		if (needle[0] == haystack[i])
+			break;
+	}
+
+	k = i;
+
+	for (j = 0; needle[j] != '\0'; j++)
+	{
+		if (needle[j] == haystack[i])
+			i++;
+		else
+			return (NULL);
+	}
+
+	if (needle[j + 1] != haystack[i])
+		return (NULL);
+
+	return (&(haystack[k]));
+
+	/*for (j = 0; needle[i] != '\0'; j++)
+	{
+		for (i = 0; haystack[i] != '\0'; i++)
 		{
 			if (haystack[i] == needle[j] &&
-			    haystack[i + 1] == needle[j + 1])
+			    haystack[i + 1] == needle[j + 1]
 			{
 				if (address == NULL)
 					address = &(haystack[i]);
@@ -28,10 +49,14 @@ char *_strstr(char *haystack, char *needle)
 				address = &(haystack[i]);
 				match++;
 			}
+			else
+			{
+				return (NULL);
+			}
 		}
 	}
 	if (match == j)
 		return (address);
 	else
-		return (NULL);
+	return (NULL);*/
 }
