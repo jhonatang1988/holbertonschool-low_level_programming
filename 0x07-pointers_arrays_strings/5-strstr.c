@@ -24,14 +24,12 @@ char *_strstr(char *haystack, char *needle)
 	k = i;
 
 	for (j = 0; needle[j] != '\0'; j++)
-	{
-		printf("j: %d\n", j);
+	{}
 		if (needle[j] != haystack[i])
 			return (NULL);
 		i++;
 	}
 
-	
 	return (&(haystack[k]));
 
 	/*for (j = 0; needle[i] != '\0'; j++)
