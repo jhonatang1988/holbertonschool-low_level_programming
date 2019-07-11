@@ -2,6 +2,7 @@
 /**
  * is_prime_aux - wether a number is a prime
  * @n: int to check
+ * @times: counter
  *
  * Return: 1 if is primer, 0 if not
  */
@@ -19,7 +20,7 @@ int is_prime_aux(int times, int n)
 	return (counter);
 }
 /**
- * _is_prime_number - checks if int is prime
+ * is_prime_number - checks if int is prime
  * @n: int
  *
  * Return: 1 if is prime, 0 if not
