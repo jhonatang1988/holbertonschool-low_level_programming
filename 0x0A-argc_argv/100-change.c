@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - give change with less amount of coins possible
  * @argc: arguments count
@@ -17,7 +18,12 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 
-		if (!(isdigit(*argv[i])))
+		if (*argv[1] == '-')
+		{
+			printf("%d\n", 0);
+			return (0);
+		}
+		if (!(isdigit(*argv[1])))
 			return (1);
 
 		while (numcoins != atoi(argv[1]))
