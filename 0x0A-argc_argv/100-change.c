@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 
-		if (atoi(argv[1]) == 0)
+		if (!(isdigit(*argv[i])))
 			return (1);
 
 		while (numcoins != atoi(argv[1]))
