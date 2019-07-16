@@ -13,22 +13,27 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
+	char *str = NULL;
 
 	if (size == 0)
 		return (NULL);
-
-	char *str = (char *)malloc(size * sizeof(char));
-
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0; i < size; i++)
+	else
 	{
-		str[i] = c;
+
+		str = (char *)malloc(size * sizeof(char));
+
+		if (str == NULL)
+			return (NULL);
+		else
+		{
+			for (i = 0; i < size; i++)
+			{
+				str[i] = c;
+			}
+			i++;
+			str[i] = '\0';
+
+			return (str);
+		}
 	}
-	i++;
-	str[i] = '\0';
-
-	return (str);
-
 }
