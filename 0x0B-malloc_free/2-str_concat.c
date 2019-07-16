@@ -16,14 +16,6 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		newStr = malloc(2);
-		newStr[0] = (char) 0;
-		newStr[1] = '\0';
-		return (newStr);
-	}
-
 	if (s1 == NULL)
 	{
 		s1 = "";
