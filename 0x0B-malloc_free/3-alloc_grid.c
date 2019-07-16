@@ -37,6 +37,7 @@ int **alloc_grid(int width, int height)
 				int* currentIntPtr = matrix[i];
 				free(currentIntPtr);
 			}
+			free(matrix);
 			return (NULL);
 		}
 	}
