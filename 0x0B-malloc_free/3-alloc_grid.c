@@ -22,9 +22,14 @@ int **alloc_grid(int width, int height)
 
 	matrix = (int **)malloc(sizeof(int *)*height);
 
+	if (matrix == NULL)
+		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
 		matrix[i] = (int *)malloc(sizeof(int) * width);
+		if (matrix == NULL)
+			return (NULL);
 	}
 
 	for(i = 0; i < height; i++)
