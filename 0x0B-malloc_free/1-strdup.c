@@ -14,6 +14,7 @@
 char *_strdup(char *str)
 {
 
+	char *dubStr = NULL;
 	int i;
 
 	if (str == NULL)
@@ -22,7 +23,7 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		;
 	i++;
-	char *dubStr = malloc(i * sizeof(char));
+	dubStr = malloc(i * sizeof(char));
 
 	if (dubStr == NULL)
 		return (NULL);
