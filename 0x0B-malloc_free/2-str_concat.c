@@ -16,9 +16,12 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
+	if (s1 == NULL && s2 == NULL)
+		newStr = "";
+
 	if (s1 == NULL)
 	{
-		i = 1;
+		s1 = "";
 	}
 	else
 	{
@@ -29,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s2 == NULL)
 	{
-		j = 1;
+		s2 = "";
 	}
 	else
 	{
