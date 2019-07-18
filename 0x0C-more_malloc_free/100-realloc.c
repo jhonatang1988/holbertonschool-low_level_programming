@@ -21,7 +21,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (castedNewAddress == NULL)
 			return (NULL);
 		else
-			return castedNewAddress;
+			return (castedNewAddress);
 	}
 	else
 	{
@@ -35,22 +35,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (old_size == new_size)
 			return (ptr);
 
-		if (new_size < old_size)
-		{
-			castedNewAddress = malloc(new_size);
-		}
-		else
-		{
-			castedNewAddress = malloc(new_size);
-		}
+		castedNewAddress = malloc(new_size);
 
 		castedPtr = (char *) ptr;
 
-		for (i = 0; i < old_size ;i++)
+		for (i = 0; i < old_size; i++)
 		{
 			castedNewAddress[i] = castedPtr[i];
 		}
 	}
 
-	return(castedNewAddress);
+	return (castedNewAddress);
 }
