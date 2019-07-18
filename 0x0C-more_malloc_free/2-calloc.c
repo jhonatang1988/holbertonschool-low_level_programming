@@ -11,6 +11,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arrayAddress = NULL;
+	unsigned int i;
+	char *casted = NULL;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -19,5 +21,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (arrayAddress == NULL)
 		return (NULL);
 
-	return (arrayAddress);
+	casted = (char *)arrayAddress;
+
+	for (i = 0; i < nmemb; i++)
+	{
+		casted[i] = 0;
+	}
+
+	return (casted);
 }
