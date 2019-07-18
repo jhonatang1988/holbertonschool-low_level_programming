@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+unsigned int strlenght(char *s1);
 /**
  * string_nconcat - concatenates two strings but only a part of the second
  * string
@@ -10,7 +11,6 @@
  *
  * Return: pointer to the new string
  */
-unsigned int strlenght(char *s1);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int lenghts1;
@@ -48,6 +48,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	return (newStringAddress);
 }
+/**
+ * strlenght - gets lenght of string
+ *
+ * @s1: first string
+ *
+ *
+ * Return: length of string
+ */
 unsigned int strlenght(char *s1)
 {
 	int i;
