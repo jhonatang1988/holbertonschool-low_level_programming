@@ -15,7 +15,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *castedNewAddress = NULL;
 	char *castedPtr = NULL;
 
-	if (ptr != NULL)
+	if (ptr == NULL)
+	{
+		castedNewAddress = malloc(new_size);
+		if (castedNewAddress == NULL)
+			return (NULL);
+		else
+			return (castedNewAddress);
+	}
+	else
 	{
 
 		if (new_size == 0)
