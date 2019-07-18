@@ -45,6 +45,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			castedNewAddress[i] = castedPtr[i];
 		}
+
+		free(ptr);
 	}
 
 	return (castedNewAddress);
