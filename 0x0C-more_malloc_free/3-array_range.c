@@ -13,12 +13,12 @@ int *array_range(int min, int max)
 	int i;
 	int *intArrayAddress = NULL;
 
+	if (min > max)
+		return (NULL);
+
 	intArrayAddress = malloc(sizeof(int) * (max - min + 1));
 
 	if (intArrayAddress == NULL)
-		return (NULL);
-
-	if (min > max)
 		return (NULL);
 
 	for (i = 0; min <= max; i++)
