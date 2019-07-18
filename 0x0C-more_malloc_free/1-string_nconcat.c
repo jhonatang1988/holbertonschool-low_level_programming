@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > lenghts2)
 		n = lenghts2;
 
-	newStringAddress = malloc(lenghts1 + n + 1);
+	newStringAddress = malloc(lenghts1 + n - 1);
 
 	if (newStringAddress == NULL)
 		return (NULL);
