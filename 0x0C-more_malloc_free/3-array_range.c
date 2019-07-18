@@ -13,9 +13,9 @@ int *array_range(int min, int max)
 	int i;
 	int *intArrayAddress = NULL;
 
-	intArrayAddress = malloc(11);
+	intArrayAddress = malloc(sizeof(int) * (max - min + 1));
 
-	if(intArrayAddress == NULL)
+	if (intArrayAddress == NULL)
 		return (NULL);
 
 	if (min > max)
