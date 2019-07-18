@@ -44,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newStringAddress[i] = s2[j];
 		i++;
 	}
-	i++;
 	newStringAddress[i] = '\0';
 
 	return (newStringAddress);
