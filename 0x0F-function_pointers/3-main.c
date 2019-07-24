@@ -4,9 +4,8 @@
 /**
  * main - receives int and operator to perform an operation
  *
- * @a: int one
- * @b: int second
- * @s: operator
+ * @argc: count or arguments
+ * @argv: array of arguments
  *
  * Return: result of iteration
  */

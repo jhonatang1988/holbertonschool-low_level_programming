@@ -5,12 +5,10 @@
  * get_op_func - selects another function to perform an operation
  *
  * @s: operator passed
- * @a: int one
- * @b: int second
  *
  * Return: the address or pointer to the function selected
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
