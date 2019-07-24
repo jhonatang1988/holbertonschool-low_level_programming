@@ -29,27 +29,17 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == 0)
+	else
 	{
-		printf("Error\n");
-		exit(100);
+
+		a = atoi(argv[1]);
+		b = atoi(argv[3]);
+
+		s = argv[2];
+		result = (get_op_func(s))(a, b);
+
+		printf("%d\n", result);
 	}
 
-	if (argv[1][0] > 57 || argv[1][0] < 48
-	    || argv[3][0] > 57 || argv[3][0] < 48)
-	{
-		printf("Error\n");
-		exit(0);
-	}
-
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-
-	s = argv[2];
-
-	result = (get_op_func(s))(a, b);
-
-	printf("%d\n", result);
-	return (result);
+	return (0);
 }
