@@ -16,13 +16,24 @@ int main(int argc, char *argv[])
 	char *s;
 	int result;
 
-	if (argc < 4 || argc > 4 || (argv[2][0] != '+' && argv[2][0] != '-'
-				     && argv[2][0] != '*' && argv[2][0] != '/'
-				     && argv[2][0] != '%')
-		)
+	if (argc < 4 || argc > 4)
 	{
 		printf("Error\n");
-		return (0);
+		exit(98);
+	}
+
+	if(argv[2][0] != '+' && argv[2][0] != '-'
+	   && argv[2][0] != '*' && argv[2][0] != '/'
+	   && argv[2][0] != '%')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == 0)
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	a = atoi(argv[1]);
