@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if(argv[2][0] != '+' && argv[2][0] != '-'
+	if (argv[2][0] != '+' && argv[2][0] != '-'
 	   && argv[2][0] != '*' && argv[2][0] != '/'
 	   && argv[2][0] != '%')
 	{
@@ -34,6 +34,13 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(100);
+	}
+
+	if (argv[1][0] > 57 || argv[1][0] < 48
+	    || argv[3][0] > 57 || argv[3][0] < 48)
+	{
+		printf("Error\n");
+		exit(0);
 	}
 
 	a = atoi(argv[1]);
