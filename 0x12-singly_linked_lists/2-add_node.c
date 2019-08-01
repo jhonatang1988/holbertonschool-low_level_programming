@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *newFirst = NULL;
 	int len = 0;
 
-	if(!str)
+	if (!str)
 		return (NULL);
 
 	temp = *head;
