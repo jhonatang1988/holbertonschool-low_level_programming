@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		if (*argv[1] == '-')
 		{
 			printf("%d\n", 0);
-			return (0);
+			return (1);
 		}
 		if (!(isdigit(*argv[1])))
 			return (1);

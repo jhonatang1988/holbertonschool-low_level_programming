@@ -1,0 +1,2 @@
+output:
+	gcc -Wall -pedantic -Werror -Wextra 4-main.c 4-new_dog.c -o e -g
