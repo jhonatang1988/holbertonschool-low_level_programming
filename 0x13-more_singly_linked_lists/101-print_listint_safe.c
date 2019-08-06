@@ -15,6 +15,9 @@ size_t print_listint_safe(const listint_t *head)
 	int count = 0;
 	int len = 0;
 
+	if (!head)
+		exit(98);
+
 	temp = head;
 	temp2 = head->next->next;
 	temp3 = head;
