@@ -8,19 +8,10 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp = NULL;
-	const listint_t *temp2 = NULL;
-	const listint_t *flag = NULL;
-	const listint_t *temp3 = NULL;
-	int count = 0;
-	int len = 0;
+	const listint_t *temp, *temp2, *temp3, *flag;
+	int count = 0, len = 0;
 
-	if (!head)
-		exit(98);
-
-	temp = head;
-	temp2 = head->next->next;
-	temp3 = head;
+	flag = NULL, temp = head, temp2 = head->next->next, temp3 = head;
 
 	while (count != 2)
 	{
