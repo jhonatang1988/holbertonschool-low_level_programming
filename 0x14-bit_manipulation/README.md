@@ -1,0 +1,2 @@
+# about
+## bit manipulation
