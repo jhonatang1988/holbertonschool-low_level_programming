@@ -36,6 +36,7 @@ int main(int ac, char **av)
 		if (w == -1)
 			error_99(av[2]);
 	}
+	free(buf);
 	c = close(fd);
 	if (c == -1)
 		error_100(1, fd, fd2);
