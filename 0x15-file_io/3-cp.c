@@ -18,8 +18,10 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
-	if (!av[1] || !av[2])
-		return (1);
+	if (!av[1])
+		error_98("(nil)");
+	if(!av[2])
+		error_99("(nil)");
 	fd = open(av[1], O_RDWR);
 	if (fd == -1)
 		error_98(av[1]);
