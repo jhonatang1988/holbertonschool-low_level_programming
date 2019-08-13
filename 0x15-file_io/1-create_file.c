@@ -10,7 +10,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, len, w;
-	char *new_content = NULL;
 
 	if (!filename)
 		return (-1);
@@ -22,13 +21,10 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		new_content = strdup(text_content);
-		len = strlen(new_content);
-		w = write(fd, new_content, len);
+		len = strlen(text_content);
+		w = write(fd, text_content, len);
 		if (w == -1)
 			return (-1);
-
-		free(new_content);
 	}
 
 	close(fd);
