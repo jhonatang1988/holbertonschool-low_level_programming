@@ -18,10 +18,10 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
-	fd = open(av[1], O_RDWR);
+	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
 		error_98(av[1]);
-	fd2 = open(av[2], O_CREAT | O_TRUNC | O_APPEND | O_RDWR, 0664);
+	fd2 = open(av[2], O_CREAT | O_TRUNC | O_APPEND | O_WRONLY, 0664);
 	if (fd2 == -1)
 		error_99(av[2]);
 	buf = (char *)malloc(sizeof(char) * 1024);
