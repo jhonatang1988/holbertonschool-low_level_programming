@@ -82,5 +82,7 @@ void error_99(char *av2)
  */
 void error_100(int fdcase, int fd1, int fd2)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdcase ? fd1 : fd2);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n"
+		, fdcase ? fd1 : fd2);
+	exit(100);
 }
