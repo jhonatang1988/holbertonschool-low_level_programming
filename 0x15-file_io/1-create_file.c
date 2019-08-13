@@ -12,10 +12,13 @@ int create_file(const char *filename, char *text_content)
 	int fd, len, w;
 	char *new_content = NULL;
 
+	if (!filename)
+		return (-1);
+
 	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
 	if (fd == -1)
-		return (fd);
+		return (-1);
 
 	if (text_content)
 	{
@@ -23,10 +26,11 @@ int create_file(const char *filename, char *text_content)
 		len = strlen(new_content);
 		w = write(fd, new_content, len);
 		if (w == -1)
-			return (w);
+			return (-1);
+
+		free(new_content);
 	}
 
-	free (new_content);
 	close(fd);
 
 	return (1);
