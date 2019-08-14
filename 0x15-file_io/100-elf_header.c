@@ -2,11 +2,10 @@
 /**
  * main - read the elf header
  *
+ * @ac: count of arguments
+ * @av: arguments array
  *
- *
- *
- *
- *
+ * Return: always zero
  */
 int main(int ac, char **av)
 {
@@ -25,7 +24,7 @@ int main(int ac, char **av)
 
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO ,"Error in steroids: cannot read the file and thats it");
+		dprintf(STDERR_FILENO, "Error: cannot read the file");
 		exit(98);
 	}
 	r = read(fd, buf, 4);
