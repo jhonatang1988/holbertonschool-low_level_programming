@@ -1,0 +1,19 @@
+#include "hash_tables.h"
+/**
+ * hash_djb2 - djb2 algorithm to create hashes
+ *
+ * @str: get the key
+ *
+ * Return: the hash
+ */
+{
+	unsigned long int hash;
+	int c;
+
+	hash = 5381;
+	while ((c = *str++))
+	{
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+	}
+	return (hash);
+}
