@@ -10,20 +10,24 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int j = 0;
+	int cont = 1, aux = 0;
+	size_t i, j;
 
-	for (; j < size; j++)
+	for (j = 0; j < size; j++)
 	{
-		for (unsigned int i = 0; (size_t)i < size - j - 1; i++)
+		cont = 0;
+		for (i = 0; i < size - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
-				int temp = array[i + 1];
-
-				array[i + 1] = array[i];
-				array[i] = temp;
+				cont++;
+				aux = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = aux;
 				print_array(array, size);
 			}
 		}
+		if (cont == 0)
+			break;
 	}
 }
