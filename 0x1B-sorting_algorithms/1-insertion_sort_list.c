@@ -9,8 +9,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp = (*list)->next;
+	listint_t *temp;
 
+	if (!*list)
+		return;
+	temp = (*list)->next;
 	while (1)
 	{
 		if (!temp || !temp->prev)
