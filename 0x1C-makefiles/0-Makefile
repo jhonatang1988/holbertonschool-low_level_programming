@@ -1,0 +1,8 @@
+# usage:
+# holberton # executable
+
+.PHONY = all holberton
+
+all: holberton
+
+holberton:
