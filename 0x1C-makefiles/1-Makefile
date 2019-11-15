@@ -1,9 +1,6 @@
 # usage: compiles all c files
-
-.PHONY = all
-
 CC = gcc
 SRC := main.c holberton.c
 
-all: $(SRC)
+all: ${SRC}
 	${CC} ${SRC} -o holberton
