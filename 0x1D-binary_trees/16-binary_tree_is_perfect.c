@@ -13,10 +13,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	const binary_tree_t *tempNode = tree;
 	int heightL = 0, heightR = 0, full = 0;
+
 	if (!tempNode)
 		return (0);
+	if (!tempNode->left && !tempNode->right)
+		return (1);
 
-	if(tempNode->left && tempNode->right)
+	if (tempNode->left && tempNode->right)
 	{
 		heightL = tree_height(tempNode->left);
 		heightR = tree_height(tempNode->right);
