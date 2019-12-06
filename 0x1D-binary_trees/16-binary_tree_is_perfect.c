@@ -24,6 +24,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		heightL = tree_height(tempNode->left);
 		heightR = tree_height(tempNode->right);
 	}
+	else
+	{
+		return (0);
+	}
 
 	if (heightL == heightR)
 	{
