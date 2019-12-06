@@ -12,51 +12,39 @@ int binary_tree_balance(const binary_tree_t *tree)
 	int balanceFactor = 0;
 	int parteLeft = 1;
 
-	if(!tempNode)
-		return balanceFactor;
-
-	while(1)
+	if (!tempNode)
+		return (balanceFactor);
+	while (1)
 	{
-		if(tempNode->left)
+		if (tempNode->left)
 			parteLeft = 1;
 		else
 			parteLeft = 0;
-		//parte left
-		if(parteLeft)
+
+		if (parteLeft)
 		{
-			if(tempNode->left)
+			if (tempNode->left)
 			{
 				tempNode = tempNode->left;
-				balanceFactor++;
-			}
-			if(tempNode->right)
+				balanceFactor++; }
+			if (tempNode->right)
 			{
 				tempNode = tempNode->right;
-				balanceFactor++;
-			}
+				balanceFactor++; }
 			else
 			{
-				parteLeft = 0;
-			}
-		}
-		//parte right
+				parteLeft = 0; } }
 		else
 		{
-			if(tempNode->left)
+			if (tempNode->left)
 			{
 				tempNode = tempNode->left;
-				balanceFactor--;
-			}
-			if(tempNode->right)
+				balanceFactor--; }
+			if (tempNode->right)
 			{
 				tempNode = tempNode->right;
-				balanceFactor--;
-			}
+				balanceFactor--; }
 			else
 			{
-				break;
-			}
-		}
-	}
-	return balanceFactor;
-}
+				break; }}}
+	return (balanceFactor); }

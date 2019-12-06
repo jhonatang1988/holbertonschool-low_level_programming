@@ -11,17 +11,17 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	const binary_tree_t *tempNode = tree;
 	size_t height = 0;
 
-	if(!tempNode)
-		return height;
+	if (!tempNode)
+		return (height);
 
-	while(1)
+	while (1)
 	{
-		if(tempNode->left)
+		if (tempNode->left)
 		{
 			tempNode = tempNode->left;
 			height++;
 		}
-		if(tempNode->right)
+		if (tempNode->right)
 		{
 			tempNode = tempNode->right;
 			height++;
@@ -32,5 +32,5 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		}
 	}
 
-	return height;
+	return (height);
 }

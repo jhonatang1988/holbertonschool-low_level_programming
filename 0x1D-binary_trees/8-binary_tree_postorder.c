@@ -11,7 +11,7 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
 	const binary_tree_t *tempNode = tree;
 
-	if(!tempNode || !func)
+	if (!tempNode || !func)
 		return;
 
 	binary_tree_postorder(tempNode->left, func);

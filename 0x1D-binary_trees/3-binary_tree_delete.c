@@ -16,31 +16,26 @@ void binary_tree_delete(binary_tree_t *tree)
 
 	if (!tempNode)
 		return;
-
-	while(1)
+	while (1)
 	{
-		if(tempNode->left)
+		if (tempNode->left)
 		{
 			tempNode = tempNode->left;
-			tieneLeft = 1;
-		}
+			tieneLeft = 1; }
 		else
 		{
-			tieneLeft = 0;
-		}
-		if(tempNode->right)
+			tieneLeft = 0; }
+		if (tempNode->right)
 		{
 			tempNode = tempNode->right;
-			tieneRight = 1;
-		}
+			tieneRight = 1; }
 		else
 		{
-			tieneRight = 0;
-		}
-		if(tieneLeft == 0 && tieneRight == 0)
+			tieneRight = 0; }
+		if (tieneLeft == 0 && tieneRight == 0)
 		{
 			parent = tempNode->parent;
-			if(parent && parent->right == tempNode)
+			if (parent && parent->right == tempNode)
 				parent->right = NULL;
 			else if (parent)
 				parent->left = NULL;
@@ -52,6 +47,4 @@ void binary_tree_delete(binary_tree_t *tree)
 		{
 			free(tempNode);
 			return;
-		}
-	}
-}
+		}}}

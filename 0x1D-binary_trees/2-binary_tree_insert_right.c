@@ -13,20 +13,18 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 	binary_tree_t *newNode = NULL;
 	binary_tree_t *secondLevel = NULL;
 
-	// si parent es NULL por requerimiento
 	if (!tempNode)
-		return NULL;
+		return (NULL);
 
 	newNode = malloc(sizeof(binary_tree_t));
 	if (!newNode)
-		return NULL;
+		return (NULL);
 
 	newNode->parent = tempNode;
 	newNode->n = value;
 	newNode->left = NULL;
 
-	// el parent no tiene right
-	if(!tempNode->right)
+	if (!tempNode->right)
 	{
 		tempNode->right = newNode;
 		newNode->right = NULL;
@@ -38,5 +36,5 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 		newNode->right = secondLevel;
 		secondLevel->parent = newNode;
 	}
-	return newNode;
+	return (newNode);
 }

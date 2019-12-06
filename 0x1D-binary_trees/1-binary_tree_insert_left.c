@@ -14,23 +14,21 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	binary_tree_t *secondLevel = NULL;
 
 	if (!tempNode)
-		return NULL;
+		return (NULL);
 
 	newNode = malloc(sizeof(binary_tree_t));
 	if (!newNode)
-		return NULL;
+		return (NULL);
 
 	newNode->parent = tempNode;
 	newNode->n = value;
 	newNode->right = NULL;
 
-	// no tiene nodo a la izquierda
 	if (!tempNode->left)
 	{
 		tempNode->left = newNode;
 		newNode->left = NULL;
 	}
-	// si tiene nodo a la izquierda
 	else
 	{
 		secondLevel = tempNode->left;
@@ -38,5 +36,5 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		newNode->left = secondLevel;
 		secondLevel->parent = newNode;
 	}
-	return newNode;
+	return (newNode);
 }
