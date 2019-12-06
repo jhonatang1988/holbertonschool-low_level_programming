@@ -14,26 +14,24 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	if (!tempNode)
 	{
-		tempNode = malloc(sizeof (binary_tree_t));
+		tempNode = malloc(sizeof(binary_tree_t));
 		tempNode->n = value;
 		tempNode->parent = NULL;
 		tempNode->left = NULL;
 		tempNode->right = NULL;
-		return tempNode;
+		return (tempNode);
 	}
 	else
 	{
 		newNode = malloc(sizeof(binary_tree_t));
 		if (!newNode)
-			return NULL;
+			return (NULL);
 
-		//llenamos el newNode
 		newNode->parent = tempNode;
 		newNode->n = value;
 		newNode->left = NULL;
 		newNode->right = NULL;
 
-		// parent mayor a value, then va a la izquierda
 		if (tempNode->n > value)
 		{
 			tempNode->left = newNode;
@@ -42,7 +40,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 		{
 			tempNode->right = newNode;
 		}
-		return newNode;
+		return (newNode);
 	}
 
 }
