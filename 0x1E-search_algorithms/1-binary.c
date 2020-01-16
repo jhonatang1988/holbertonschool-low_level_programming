@@ -1,47 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
-
 /**
- * print_array - searches for a value in a array of integers.
- * @array: pointer to the array
- * @l: size of the array
- * @r: value to search
- * Return: index location of the value
- */
-void print_array(int *array, size_t l, size_t r)
-{
-	printf("Searching in array: ");
-	for (; l < r; l++)
-		printf("%d, ", array[l]);
-	printf("%d\n", array[l]);
-}
-
-/**
- * binary_search - searches for a value in a array of integers.
- * @array: pointer to the array
+ * binary_search - searches a value using binary search algo
+ *
+ * @array: array to search for
  * @size: size of the array
- * @value: value to search
- * Return: index location of the value
+ * @value: value to search in the array
+ *
+ * Return: index where value was found or -1 otherwise
  */
 int binary_search(int *array, size_t size, int value)
 {
+	size_t low = 0;
+	size_t high = size - 1;
+	int mid = high;
+	int ind = -1;
 
-	size_t l, r, m;
-
-	if (array == NULL)
+	if (!array)
 		return (-1);
-	r = size - 1;
-	for (l = 0; l < size;)
+
+	while (low <= high)
 	{
-		print_array(array, l, r);
-		m = (l + r) / 2;
-		if (array[m] < value)
-			l = m + 1;
-		else if (array[m] > value)
-			r = m - 1;
+		printf("Searching in array: ");
+		for (size_t i = low; i <= high; i++)
+		{
+			printf("%d", array[i]);
+			if (i != high)
+				printf(", ");
+		}
+		printf("\n");
+		mid = low + (high - low) / 2;
+		if (array[mid] == value)
+		{
+			ind = mid;
+			break;
+		}
 		else
-			return (m);
+		{
+			if (array[mid] < value)
+				low = mid + 1;
+			else
+				high = mid - 1;
+		}
 	}
-	return (-1);
+	return (ind);
 }
