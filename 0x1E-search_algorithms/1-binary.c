@@ -1,5 +1,4 @@
 #include "search_algos.h"
-
 /**
  * binary_search - searches a value using binary search algo
  *
