@@ -1,5 +1,24 @@
 #include "search_algos.h"
 /**
+ * print_array - searches for a value in a array of integers.
+ * @array: pointer to the array
+ * @l: size of the array
+ * @r: value to search
+ * Return: index location of the value
+ */
+void print_array(int *array, size_t l, size_t r)
+{
+	printf("Searching in array: ");
+	for (size_t i = l; i <= r; i++)
+	{
+		printf("%d", array[i]);
+		if (i != r)
+			printf(", ");
+	}
+	printf("\n");
+}
+
+/**
  * binary_search - searches a value using binary search algo
  *
  * @array: array to search for
@@ -17,14 +36,7 @@ int binary_search(int *array, size_t size, int value)
 	r = size - 1;
 	for (l = 0; l < size;)
 	{
-		printf("Searching in array: ");
-		for (size_t i = l; i <= r; i++)
-		{
-			printf("%d", array[i]);
-			if (i != r)
-				printf(", ");
-		}
-		printf("\n");
+		print_array(array, l, r);
 		m = (l + r) / 2;
 		if (array[m] < value)
 			l = m + 1;
